@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #18c84b;
+  --color-brand-red: #ef3232;
+}
+
+:root {
+  --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Sora", "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+.section-title,
+.gradient-title {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
+.page-card {
+  @apply rounded-2xl border border-slate-200/80 bg-white/95 p-6 shadow-sm;
+}
+
+.section-title {
+  @apply text-2xl font-bold tracking-tight text-slate-900;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-300/90 bg-white px-3 py-2 text-sm outline-none ring-emerald-500 transition focus:ring-2;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-emerald-500 px-4 py-2 text-sm font-bold text-white transition hover:bg-emerald-600;
+  font-family: var(--font-heading);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-emerald-300 bg-white px-4 py-2 text-sm font-bold text-emerald-700 transition hover:bg-emerald-50;
+  font-family: var(--font-heading);
+}
+
+.nav-link {
+  @apply rounded-lg px-3 py-2 text-slate-700 transition hover:bg-emerald-50 hover:text-emerald-700;
+  font-family: var(--font-heading);
+}
+
+.nav-link.router-link-active {
+  @apply bg-emerald-100 text-emerald-800;
+}
+
+.mobile-nav-link {
+  @apply rounded-lg border border-slate-300 px-3 py-2 text-xs font-semibold text-slate-700;
+  font-family: var(--font-heading);
+}
+
+.mobile-nav-link.router-link-active {
+  @apply border-emerald-500 bg-emerald-50 text-emerald-700;
+}
+
+.footer-link {
+  @apply text-slate-600 transition hover:text-emerald-700;
+}
+
+.animated-hero {
+  @apply relative overflow-hidden rounded-3xl border border-emerald-100/80 bg-[#eef5f3] p-6 lg:p-8;
+}
+
+.animated-hero::before,
+.animated-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(45px);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.animated-hero::before {
+  width: 220px;
+  height: 220px;
+  left: -60px;
+  top: -70px;
+  background: #16a34a;
+  animation: ambient-drift 10s ease-in-out infinite;
+}
+
+.animated-hero::after {
+  width: 240px;
+  height: 240px;
+  right: -80px;
+  bottom: -90px;
+  background: #ef4444;
+  animation: ambient-drift 12s ease-in-out infinite reverse;
+}
+
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.18), transparent 42%),
+    radial-gradient(circle at 82% 18%, rgba(14, 165, 233, 0.13), transparent 48%);
+  animation: pattern-breathe 8s ease-in-out infinite;
+}
+
+.gradient-title {
+  background: linear-gradient(90deg, #0f172a, #15803d, #0f172a);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: title-glow 5.5s linear infinite;
+}
+
+.text-rise {
+  animation: text-rise 0.75s ease-out both;
+}
+
+.text-rise-delay {
+  animation: text-rise 1s ease-out both;
+  animation-delay: 0.2s;
+}
+
+.float-soft {
+  animation: float-soft 4.8s ease-in-out infinite;
+}
+
+.image-demo {
+  @apply overflow-hidden rounded-2xl border border-white/80 shadow-lg;
+}
+
+.image-demo img {
+  @apply h-full w-full object-cover;
+  animation: image-zoom 9s ease-in-out infinite;
+}
+
+.template-mockup {
+  @apply relative overflow-hidden rounded-2xl border border-white/80 bg-white/90 p-4 shadow-lg;
+}
+
+.template-mockup::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  right: -36px;
+  top: -36px;
+  border-radius: 9999px;
+  background: rgba(16, 185, 129, 0.16);
+}
+
+.template-mockup .bar {
+  @apply mb-2 h-2.5 rounded-full bg-slate-200;
+}
+
+.template-mockup .bar-strong {
+  @apply h-3 rounded-full bg-emerald-400;
+}
+
+.template-mockup .grid {
+  @apply mt-3 grid grid-cols-2 gap-2;
+}
+
+.template-mockup .tile {
+  @apply h-14 rounded-xl border border-slate-200 bg-slate-50;
+}
+
+@keyframes text-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes title-glow {
+  to {
+    background-position: 220% center;
+  }
+}
+
+@keyframes ambient-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(24px, -18px) scale(1.08);
+  }
+}
+
+@keyframes pattern-breathe {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes image-zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
