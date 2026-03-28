@@ -2,18 +2,10 @@
   <section class="space-y-6">
     <header class="animated-hero">
       <div class="hero-pattern"></div>
-      <div class="relative z-10 grid items-center gap-6 lg:grid-cols-2">
+      <div class="relative z-10">
         <div>
           <h1 class="gradient-title text-rise text-4xl font-black lg:text-5xl">Evenements</h1>
           <p class="text-rise-delay mt-2 text-slate-600">Salons, forums, ateliers et formations pour booster l employabilite.</p>
-        </div>
-        <div class="template-mockup float-soft h-44 lg:h-52">
-          <div class="bar bar-strong w-2/3"></div>
-          <div class="bar w-2/5"></div>
-          <div class="grid">
-            <div class="tile"></div>
-            <div class="tile"></div>
-          </div>
         </div>
       </div>
     </header>

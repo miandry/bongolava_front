@@ -2,20 +2,12 @@
   <section class="space-y-6">
     <header class="animated-hero">
       <div class="hero-pattern"></div>
-      <div class="relative z-10 grid items-center gap-6 lg:grid-cols-2">
+      <div class="relative z-10">
         <div>
           <h1 class="gradient-title text-rise text-4xl font-black lg:text-5xl">Mentions legales</h1>
           <p class="text-rise-delay mt-2 text-slate-700">
             Informations juridiques, politique de confidentialite et conditions d utilisation de la plateforme.
           </p>
-        </div>
-        <div class="template-mockup float-soft h-44 lg:h-52">
-          <div class="bar bar-strong w-3/5"></div>
-          <div class="bar w-2/5"></div>
-          <div class="grid">
-            <div class="tile"></div>
-            <div class="tile"></div>
-          </div>
         </div>
       </div>
     </header>

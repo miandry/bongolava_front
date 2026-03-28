@@ -170,13 +170,137 @@
       <RouterView />
     </main>
 
-    <footer class="border-t border-slate-200 bg-white/95">
-      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-6 text-sm text-slate-600 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <p>© {{ new Date().getFullYear() }} MJS Emploi Jeunes. Tous droits reserves.</p>
-        <div class="flex flex-wrap gap-4">
-          <RouterLink to="/a-propos" class="footer-link">A propos</RouterLink>
-          <RouterLink to="/contact-faq" class="footer-link">Contact / FAQ</RouterLink>
-          <RouterLink to="/mentions-legales" class="footer-link">Mentions legales</RouterLink>
+    <footer class="bg-slate-900 text-slate-100/90">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+          <div class="sm:col-span-2 lg:col-span-1">
+            <div class="mb-4 flex items-center gap-2.5">
+              <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-600">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5 text-white"
+                  aria-hidden="true"
+                >
+                  <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                </svg>
+              </div>
+              <span class="font-heading text-lg font-bold text-white">Bongolava Jobs</span>
+            </div>
+            <p class="text-sm leading-relaxed text-slate-400">
+              La plateforme d'emploi dédiée à la région de Bongolava, Madagascar. Connecter les talents aux opportunités.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-heading mb-4 font-semibold text-white">Navigation</h4>
+            <ul class="space-y-2.5">
+              <li>
+                <RouterLink to="/jobs" class="text-sm text-slate-400 transition-colors hover:text-emerald-400">Offres d'emploi</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/profils" class="text-sm text-slate-400 transition-colors hover:text-emerald-400">Profils candidats</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/evenements" class="text-sm text-slate-400 transition-colors hover:text-emerald-400">Événements</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/recruteur" class="text-sm text-slate-400 transition-colors hover:text-emerald-400">Espace Recruteur</RouterLink>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-heading mb-4 font-semibold text-white">Informations</h4>
+            <ul class="space-y-2.5">
+              <li>
+                <RouterLink to="/a-propos" class="text-sm text-slate-400 transition-colors hover:text-emerald-400">À propos</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/contact-faq" class="text-sm text-slate-400 transition-colors hover:text-emerald-400">Contact &amp; FAQ</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/mentions-legales" class="text-sm text-slate-400 transition-colors hover:text-emerald-400">Mentions légales</RouterLink>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-heading mb-4 font-semibold text-white">Contact</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-2 text-sm text-slate-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"
+                  aria-hidden="true"
+                >
+                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Région Bongolava, Madagascar
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"
+                  aria-hidden="true"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <a href="mailto:contact@bongolavajobs.mg" class="hover:text-emerald-400">contact@bongolavajobs.mg</a>
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+                <a href="tel:+261340000000" class="hover:text-emerald-400">+261 34 00 000 00</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+          <p class="text-sm text-slate-500">© {{ new Date().getFullYear() }} Bongolava Jobs. Tous droits réservés.</p>
+          <p class="text-sm text-slate-500">Fait avec ❤️ pour la région de Bongolava</p>
         </div>
       </div>
     </footer>

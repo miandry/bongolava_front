@@ -152,37 +152,6 @@ h3,
   animation: image-zoom 9s ease-in-out infinite;
 }
 
-.template-mockup {
-  @apply relative overflow-hidden rounded-2xl border border-white/80 bg-white/90 p-4 shadow-lg;
-}
-
-.template-mockup::before {
-  content: "";
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  right: -36px;
-  top: -36px;
-  border-radius: 9999px;
-  background: rgba(16, 185, 129, 0.16);
-}
-
-.template-mockup .bar {
-  @apply mb-2 h-2.5 rounded-full bg-slate-200;
-}
-
-.template-mockup .bar-strong {
-  @apply h-3 rounded-full bg-emerald-400;
-}
-
-.template-mockup .grid {
-  @apply mt-3 grid grid-cols-2 gap-2;
-}
-
-.template-mockup .tile {
-  @apply h-14 rounded-xl border border-slate-200 bg-slate-50;
-}
-
 @keyframes text-rise {
   from {
     opacity: 0;
