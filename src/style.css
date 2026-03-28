@@ -106,9 +106,19 @@ h3,
 .hero-pattern {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.18), transparent 42%),
-    radial-gradient(circle at 82% 18%, rgba(14, 165, 233, 0.13), transparent 48%);
-  animation: pattern-breathe 8s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background-color: #e8f4ef;
+  background-image:
+    linear-gradient(145deg, rgba(238, 253, 244, 0.94) 0%, rgba(226, 245, 236, 0.88) 45%, rgba(241, 245, 249, 0.9) 100%),
+    radial-gradient(circle at 18% 22%, rgba(16, 185, 129, 0.2), transparent 46%),
+    radial-gradient(circle at 78% 16%, rgba(14, 165, 233, 0.12), transparent 52%),
+    url("/riziere-colline.jpg");
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  animation: pattern-breathe 10s ease-in-out infinite;
 }
 
 .gradient-title {
@@ -206,7 +216,7 @@ h3,
     opacity: 1;
   }
   50% {
-    opacity: 0.65;
+    opacity: 0.94;
   }
 }
 

@@ -2,48 +2,43 @@
   <section class="space-y-8">
     <header class="animated-hero">
       <div class="hero-pattern"></div>
-      <div class="relative z-10 grid items-center gap-7 lg:grid-cols-2">
-        <div>
-          <p class="text-rise text-sm font-semibold uppercase tracking-wide text-emerald-700">
-            Bongolava Jobs - Region Bongolava
-          </p>
-          <h1 class="gradient-title text-rise-delay mt-2 text-4xl font-black leading-tight lg:text-5xl">
-            Trouver un emploi local devient simple
-          </h1>
-          <p class="text-rise-delay mt-3 max-w-xl text-slate-600">
-            Plateforme web en francais pour connecter jeunes, entreprises, ONG et associations.
-          </p>
+      <div class="relative z-10">
+        <div class="hero-omby relative min-h-[320px] overflow-hidden rounded-3xl border border-white/25 p-6 shadow-lg sm:min-h-[380px] lg:min-h-[420px] lg:p-10">
+          <div class="hero-omby-bg" aria-hidden="true"></div>
+          <div class="hero-omby-overlay" aria-hidden="true"></div>
+          <div class="relative z-10">
+            <p class="text-rise text-sm font-semibold uppercase tracking-wide text-emerald-200">
+              Bongolava Jobs - Region Bongolava
+            </p>
+            <h1 class="text-rise-delay mt-2 max-w-3xl text-4xl font-black leading-tight text-white drop-shadow-sm lg:text-5xl">
+              Trouver un emploi local devient simple
+            </h1>
+            <p class="text-rise-delay mt-3 max-w-xl text-emerald-50/95">
+              Plateforme web en francais pour connecter jeunes, entreprises, ONG et associations.
+            </p>
 
-          <div class="mt-5 grid gap-3 rounded-2xl border border-white/70 bg-white/90 p-3 md:grid-cols-4">
-            <input class="input md:col-span-2" placeholder="Ex: macon, electricien, developpeur" />
-            <select class="input">
-              <option>Tous les contrats</option>
-              <option>CDI</option>
-              <option>CDD</option>
-              <option>Stage</option>
-            </select>
-            <button class="btn-primary">Rechercher</button>
-          </div>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span v-for="tag in popularSearches" :key="tag" class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-600 shadow-sm">
-              {{ tag }}
-            </span>
-          </div>
-        </div>
-
-        <div class="template-mockup float-soft h-72 lg:h-96">
-          <div class="bar bar-strong w-2/3"></div>
-          <div class="bar w-1/2"></div>
-          <div class="bar w-5/6"></div>
-          <div class="mt-3 rounded-xl border border-slate-200 bg-white p-3">
-            <div class="bar bar-strong w-1/2"></div>
-            <div class="bar w-2/3"></div>
-          </div>
-          <div class="grid">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
+            <div class="mt-6 grid gap-3 rounded-2xl border border-white/70 bg-white/90 p-3 md:grid-cols-4">
+              <input class="input md:col-span-2" placeholder="Ex: macon, electricien, developpeur" />
+              <select class="input">
+                <option>Tous les contrats</option>
+                <option>CDI</option>
+                <option>CDD</option>
+                <option>Stage</option>
+              </select>
+              <button class="btn-primary">Rechercher</button>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span
+                v-for="tag in popularSearches"
+                :key="tag"
+                class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-600 shadow-sm"
+              >
+                {{ tag }}
+              </span>
+            </div>
+            <p class="mt-4 max-w-2xl text-[10px] leading-snug text-emerald-100/75">
+              Photo : zebus (omby) a Madagascar — Alex Dunkel, Wikimedia Commons (CC BY-SA 3.0).
+            </p>
           </div>
         </div>
       </div>
@@ -84,3 +79,24 @@ const featuredJobs = [
   { type: 'Stage', title: 'Assistant Informatique', company: 'ONG Jeunes Connectes', location: 'Tsiroanomandidy' },
 ]
 </script>
+
+<style scoped>
+.hero-omby-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/omby-madagascar.jpg');
+  background-size: cover;
+  background-position: center 35%;
+}
+
+.hero-omby-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    125deg,
+    rgba(6, 78, 59, 0.88) 0%,
+    rgba(6, 95, 70, 0.72) 45%,
+    rgba(15, 23, 42, 0.55) 100%
+  );
+}
+</style>
